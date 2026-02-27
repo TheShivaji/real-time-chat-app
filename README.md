@@ -1,7 +1,7 @@
 <h1 align="center">🚀 Backend Journey</h1>
 
 <p align="center">
-Learning backend development by building real world APIs
+Learning backend development by building a Projects
 </p>
 
 <p align="center">
