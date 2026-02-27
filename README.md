@@ -1,119 +1,53 @@
-<h1 align="center">💬 MERN Real-Time Chat Application</h1>
-<p align="center">Full Stack Chat App using React, Node.js, MongoDB and Socket.io</p>
-
----
-
-# 📸 Preview
-
-![Chat App](https://images.unsplash.com/photo-1611605698335-8b1569810432)
-
----
-
 # 🚀 Tech Stack
 
-**Frontend**
-- React
-- TailwindCSS
-- Socket.io Client
-
-**Backend**
-- Node.js
-- Express.js
-- MongoDB
-- JWT Authentication
-- Socket.io
+<p align="center">
+<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,js,git,github,vscode,npm,postman,linux" />
+</p>
 
 ---
 
-# ✨ Features
+# 🧰 Backend
 
-- User Signup & Login  
-- Secure Password Hashing  
-- JWT Authentication  
-- Real-Time Messaging  
-- Image Sharing  
-- Online Users  
-
----
-
-# 📂 Folder Structure
-
-```bash
-src
- ├ config
- ├ controllers
- │   └ auth.controller.js
- ├ middleware
- ├ models
- │   └ user.model.js
- ├ routes
- │   └ authRoute.js
- └ util
-     └ generatetoken.js
-```
+<p align="center">
+<img src="https://skillicons.dev/icons?i=nodejs" height="55"/>
+<img src="https://skillicons.dev/icons?i=express" height="55"/>
+<img src="https://skillicons.dev/icons?i=mongodb" height="55"/>
+<img src="https://skillicons.dev/icons?i=js" height="55"/>
+</p>
 
 ---
 
-# ⚙️ Installation
+# ⚙️ Tools
 
-Clone repository
-
-```bash
-git clone https://github.com/yourusername/mern-realtime-chat-app
-```
-
-Enter project
-
-```bash
-cd mern-realtime-chat-app
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Run project
-
-```bash
-npm run dev
-```
+<p align="center">
+<img src="https://skillicons.dev/icons?i=git" height="55"/>
+<img src="https://skillicons.dev/icons?i=github" height="55"/>
+<img src="https://skillicons.dev/icons?i=vscode" height="55"/>
+<img src="https://skillicons.dev/icons?i=npm" height="55"/>
+<img src="https://skillicons.dev/icons?i=postman" height="55"/>
+</p>
 
 ---
 
-# 🔐 Environment Variables
+# 💻 Environment
 
-Create `.env`
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_url
-JWT_SECRET=secret
-```
+<p align="center">
+<img src="https://skillicons.dev/icons?i=linux" height="55"/>
+</p>
 
 ---
 
-# 🧠 Learning Purpose
+# 📦 Project Highlights
 
-This project demonstrates:
-
-- Authentication
-- Backend architecture
-- Real-time systems
-- MERN stack development
-
----
-
-# 🌟 Future Improvements
-
-- Group chat
-- Notifications
-- Video calling
-- Mobile version
+- Authentication System  
+- REST API Architecture  
+- MongoDB Database Integration  
+- JWT Security  
+- Cookie Based Auth  
+- Backend Project Structure  
 
 ---
 
-# 👨‍💻 Author
+# ⭐ Support
 
-Built while learning Full Stack Development 🚀
+If you like this project consider giving it a star ⭐
