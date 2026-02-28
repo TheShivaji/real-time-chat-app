@@ -1,8 +1,8 @@
 import jwt from "jsonwebtoken"
 
-const generateCookieAndSet = (userID , res) => {
+const generateCookieAndSet = (userId , res) => {
   const token = jwt.sign({
-    userID
+    userId: userId,
   },
     process.env.JWT_SECRET
     ,

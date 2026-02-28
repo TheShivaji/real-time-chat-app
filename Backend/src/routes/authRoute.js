@@ -1,10 +1,15 @@
 import express from "express"
-import { login, logout, signup } from "../controllers/auth.controller.js"
+import { login, logout, signup , updateProfile , Checkauth} from "../controllers/auth.controller.js"
+import proctectRoutes from "../middleware/protectRoutes.js"
 
-const router = express.Router()
+const authRouter = express.Router()
 
-router.post("/signup" , signup)
-router.post("login" , login)
-router.post("logout" , logout)
+authRouter.post("/signup" , signup)
+authRouter.post("/login" , login)
+authRouter.post("/logout" , logout)
 
-export default router
+authRouter.put("/update-profile" , proctectRoutes , updateProfile)
+
+authRouter.get("/Check" , proctectRoutes , Checkauth)
+
+export default authRouter
