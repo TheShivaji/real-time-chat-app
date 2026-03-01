@@ -51,13 +51,11 @@ export const login = async (req, res) => {
   const { email, password } = req.body
   try {
     const user = await User.findOne({ email })
-
     if (!user) {
       return res.status(409).json({
         message: "Email is not exist"
       })
     }
-
     const isPassword = await bcriypt.compare(password, user.password)
     if (!isPassword) {
       return res.status(400).json({
@@ -71,7 +69,6 @@ export const login = async (req, res) => {
       email: email,
       profilePic: user.profilePic,
     })
-
   } catch (error) {
     console.log("Error in login controller", error.message);
     res.status(500).json({
