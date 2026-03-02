@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import React, { Profiler, useEffect } from 'react'
+import { Routes , Route} from "react-router-dom"
+import Navbar from './components/Navbar'
+import { HomePage } from "./pages/HomePage"
+import LoginPage from './pages/LoginPage'
+import SignUpPage from './pages/SignUpPage'
+import SettingPage from './pages/SettingPage'
+import ProfilePage from './pages/ProfilePage'
+import {useAuthStore} from './store/useAuthStore.js'
+import MyLoaderComponent from './components/MyLoaderComponenet.jsx'
+export const App = () => {
+  const {authUser , checkauth , ischecking} = useAuthStore();
+  useEffect(() => {
+    checkauth()
+  }, [checkauth])
+  console.log({authUser})
+if(ischecking && !authUser){
+return (
+  <MyLoaderComponent/>
+)}
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
+    <div>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element = {authUser ? <HomePage/> : <Navigate to="/login"/> }/ >
+        <Route path="/sigup" element = {!authUser ?<SignUpPage/> : <Navigate to="/"/>}/>
+        <Route path="/login" element= {!authUser ?<LoginPage/> : <Navigate to="/"/>}/>
+        <Route path="/setting" element={<SettingPage/>}/>
+        <Route path = "/profile" element={authUser ? <ProfilePage/> : <Navigate to="/login"/>}/>
+      </Routes>
+    </div>
+  )}
 export default App
