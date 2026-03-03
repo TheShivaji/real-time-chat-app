@@ -10,6 +10,6 @@ authRouter.post("/logout" , logout)
 
 authRouter.put("/update-profile" , proctectRoutes , updateProfile)
 
-authRouter.get("/Check" , proctectRoutes , Checkauth)
+authRouter.get("/check" , proctectRoutes , Checkauth)
 
 export default authRouter
