@@ -11,6 +11,7 @@ import MyLoaderComponent from './components/MyLoaderComponenet.jsx'
 import { Navigate } from 'react-router-dom'
 
 import { Toaster } from 'sonner';
+import Footer from './components/Footer.jsx'
 export const App = () => {
   const { authUser, checkauth, ischecking } = useAuthStore();
   useEffect(() => {
@@ -34,6 +35,8 @@ export const App = () => {
         <Route path="/setting" element={<SettingPage />} />
         <Route path="/profile" element={authUser ? <ProfilePage /> : <Navigate to="/login" />} />
       </Routes>
+
+      <Footer/>
     </div>
   )
 }

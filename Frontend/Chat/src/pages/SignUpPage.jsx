@@ -4,14 +4,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
 
 export const SignUpPage = () => {
-
-
-
-
-
-
   const [showPassword, setShowPassword] = useState(false);
-
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -56,9 +49,7 @@ export const SignUpPage = () => {
   };
 
   return (
-
-
-    <div className='min-h-screen grid lg:grid-cols-2 bg-base-200'>
+    <div className='h-[calc(100vh-64px)] grid lg:grid-cols-2 bg-base-200 overflow-y-hidden'>
 
 
       <div className='flex flex-col items-center justify-center p-6 sm:p-12'>
@@ -78,11 +69,11 @@ export const SignUpPage = () => {
               </label>
               <input
                 type='text'
-                placeholder='John Doe'
+                placeholder='Shivaji Jagdale'
                 className='w-full input input-bordered focus:border-primary'
                 value={formData.fullName}
                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                
+
               />
             </div>
             <div>
@@ -91,7 +82,7 @@ export const SignUpPage = () => {
               </label>
               <input
                 type='email'
-                placeholder='john@example.com'
+                placeholder='Shivaji@email.com'
                 className='w-full input input-bordered focus:border-primary'
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}

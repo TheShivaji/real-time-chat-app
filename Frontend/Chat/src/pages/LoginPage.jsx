@@ -33,8 +33,8 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className='min-h-screen grid lg:grid-cols-2 bg-base-200'>
-      <div className='flex flex-col items-center justify-center p-6 sm:p-12'>
+    <div className='h-[calc(100vh-64px)] grid lg:grid-cols-2 bg-base-200'>
+      <div className='flex flex-col items-center justify-center p-6 sm:p-12 overflow-hidden'>
         <div className='w-full max-w-md p-8 rounded-2xl shadow-xl bg-base-100'>
 
           <div className='text-center mb-8'>
@@ -49,7 +49,7 @@ export const LoginPage = () => {
               </label>
               <input
                 type='email'
-                placeholder='john@example.com'
+                placeholder='Shivaji@gmail.com'
                 className='w-full input input-bordered focus:border-primary'
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -107,7 +107,6 @@ export const LoginPage = () => {
 
         </div>
       </div>
-
       <div className='hidden lg:flex items-center justify-center bg-base-300 p-12'>
         <div className='max-w-md text-center'>
           <div className="text-8xl mb-6 animate-pulse">🔒</div>
