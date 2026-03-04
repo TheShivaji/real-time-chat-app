@@ -12,8 +12,10 @@ import { Navigate } from 'react-router-dom'
 
 import { Toaster } from 'sonner';
 import Footer from './components/Footer.jsx'
+import { useThemeStore } from './store/useTheamStore.js'
 export const App = () => {
   const { authUser, checkauth, ischecking } = useAuthStore();
+  const { theme } = useThemeStore();
   useEffect(() => {
     checkauth()
   }, [checkauth])
@@ -24,10 +26,11 @@ export const App = () => {
     )
   }
   return (
-    <div>
+    <div data-theme={theme} className="min-h-screen transition-colors duration-300">
       <Navbar />
 
-      <Toaster position="top-center"  theme="dark" />
+      <Toaster position="top-center" theme="dark" />
+      <main className="flex-1 overflow-y-auto custom-scrollbar">
       <Routes>
         <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
         <Route path="/signup" element={!authUser ? <SignUpPage /> : <Navigate to="/" />} />
@@ -35,9 +38,11 @@ export const App = () => {
         <Route path="/setting" element={<SettingPage />} />
         <Route path="/profile" element={authUser ? <ProfilePage /> : <Navigate to="/login" />} />
       </Routes>
+      </main>
 
-      <Footer/>
+      <Footer />
     </div>
   )
 }
+
 export default App
