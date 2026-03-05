@@ -1,7 +1,7 @@
 import React, { Profiler, useEffect } from 'react'
 import { Routes, Route } from "react-router-dom"
 import Navbar from './components/Navbar'
-import { HomePage } from "./pages/HomePage"
+import HomePage from './pages/HomePage.jsx'
 import LoginPage from './pages/LoginPage'
 import SignUpPage from './pages/SignUpPage'
 import SettingPage from './pages/SettingPage'
@@ -9,6 +9,7 @@ import ProfilePage from './pages/ProfilePage'
 import { useAuthStore } from './store/useAuthStore.js'
 import MyLoaderComponent from './components/MyLoaderComponenet.jsx'
 import { Navigate } from 'react-router-dom'
+import Silder from "./components/Sidebar.jsx"
 
 import { Toaster } from 'sonner';
 import Footer from './components/Footer.jsx'
@@ -26,7 +27,7 @@ export const App = () => {
     )
   }
   return (
-    <div data-theme={theme} className="min-h-screen transition-colors duration-300">
+    <div data-theme={theme} className="min-h-screen transition-colors duration-300 ">
       <Navbar />
 
       <Toaster position="top-center" theme="dark" />
@@ -40,7 +41,7 @@ export const App = () => {
       </Routes>
       </main>
 
-      <Footer />
+
     </div>
   )
 }
